@@ -1,0 +1,12 @@
+.page-container {
+    position: relative;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.versions-container > header {
+    display: flex;
+    justify-content: space-between;
+}
