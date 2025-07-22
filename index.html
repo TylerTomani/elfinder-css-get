@@ -6,14 +6,11 @@
     <title>elFinder-css-get-draft</title>
     <link rel="stylesheet" href="css/main.css">
     <!-- <link rel="stylesheet" href="../../../css/single-header.css"> -->
-    
     <!-- <link rel="stylesheet" href="css/dark-mode.css"> -->
-    
     <script type="module" src="../js/letterFocus-elFinder-boiler-plate.js" defer></script>
     <script type="module" src="../js/copy-code-elFinder-boiler-plate.js" defer></script>
     <script type="module" src="../../../js/dark-mode.js" defer></script>
     <script type="module" src="../js/load-textarea-code-draft.js" defer></script>
-
 </head>
 <!-- <body class="dark-mode"> -->
 <body class="">
@@ -39,9 +36,9 @@
 
                     <div class="code-container">
                         <textarea autofocus readonly id="mainScript" tabindex="0" class="copy-code">
-                            <!-- <textarea readonly   id="mainScript" tabindex="0" class="copy-code"> -->
-                            No scripts are in this project yet, save them in /versions folder in the directory of this
-                            page
+<!-- <textarea readonly   id="mainScript" tabindex="0" class="copy-code"> -->
+No scripts are in this project yet, save them in /versions folder in the directory of this
+page
                         </textarea>
                     </div>
                 </div>
@@ -55,36 +52,37 @@
             <img id="elementImg" src="images/01.png" alt="">
             <!-- 1. -->
             <div class="code-container">
+				<a class="black-click-img-box"></a>
                 <h4>Load Unpack</h4>
                 <p>
                     
                 </p>
-                <a class="black-click-img-box"></a>
                 <textarea readonly data-img="images/01.png" tabindex="0" class="copy-code">
 TBD
                 </textarea>
             </div>
             <!-- 2. -->
             <div class="code-container">
-                <h4>Remove</h4>
                 <a class="black-click-img-box"></a>
+                <h4>Remove</h4>
                 <pre readonly data-img="images/02.png" tabindex="0" class="copy-code"><span class="r">
 &lt;cr-button id="removeButton" aria-describedby="a11yAssociation" role="button" tabindex="0" aria-disabled="false">
 Remove &lt;/cr-button>             </span></pre>
             </div>
             <!-- 3a. -->
             <div class="code-container">
+				<a class="black-click-img-box"></a>
                 <pre readonly data-img="images/03.png" tabindex="0" class="copy-code">
 <span class="b">items-container</span> <span class="m">extensions-item</span> <span class="r">#removeButton</span>
                 </pre>
             </div>
             <!-- 3b. -->
             <div class="code-container">
-                <h3>3b. get all remove btn</h3>
+				<a class="black-click-img-box"></a>
+				<h3>3b. get all remove btn</h3>
                 <p>
                     for now, query all remove button in 
                 </p>
-                
                 <pre readonly data-img="images/03.png" tabindex="0" class="copy-code">
 <span class="b">&lt;div class="items-container"></span>
 &lt;!-- Render only a few items first, to improve initial render time,
@@ -150,18 +148,21 @@ initial render time and total render time. -->
 &lt;!--end of items-container  --&gt;
 </pre>
             </div>
-            
-            
-            
         </div>
+		<footer class="mobile-footer-header">
+			<div class="main-links">
+				<a tabindex="0" id="homelink" href="https://tylertomani.github.io/myWebSite/index.html">Home (main)</a>
+			</div>
+			<div class="main-links">
+				<a tabindex="0" id="codeComandShortcuts" target="_blank" href="https://tylertomani.github.io/myWebSite/webPages/codeComShortcuts/codeComShortcuts.html
+																	"><sub>code comand shortcuts</sub></a>
+				<a tabindex="0" id="chatGpt" target="_blank" href="https://tylertomani.github.io/myWebSite/webPages/chatGpt-questions/index.html
+														">chatGpt
+					Questions</a>
+			</div>
+			
+		</footer>
     </div>
-    <header>
-        <a tabindex="0" id="homelink" href="../chromeExtension-letterFocus.html">home</a>
-        <h1>Chat Gpt - Letter Focus</h1>
-        <!-- I like next here when small on mobile -->
-        <!-- <a tabindex="0" id="nxtBtn">next</a> -->
-    </header>
 
 </body>
-
 </html>

@@ -46,3 +46,7 @@ h4 .dark-mode p {
 .dark-mode .main-links a:active {
     color: white;
 }
+
+.dark-mode textarea {
+    background: rgb(40,38,46,.05);
+}

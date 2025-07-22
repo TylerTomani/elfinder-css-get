@@ -13,3 +13,21 @@
 .draft {
     background-color: rgba(57, 46, 46, 0.5) ;
 }
+.version{
+    border: 2px solid blue;
+}
+.code-elements-container {
+    border: 1px dashed black;
+}
+#mainScript{
+    border: 2px solid red;
+}
+#draftScript{
+    background-color: red !important;
+}
+#wokingBackupScript{
+    background-color: red !important;
+}
+.black-click-img-box {    
+    background-color: black;
+}

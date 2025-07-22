@@ -14,3 +14,24 @@
     transform: scale(1.0);
     transition: all .33s;
 }
+
+.copy-code {
+    width: 100%;
+    max-width: 80vw;
+    height: auto;
+    max-height: 30vh;
+    font-family: monospace;
+    white-space: pre;
+    overflow-x: auto;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+    padding: .5em;
+    /* resize: vertical; */
+    height: 100%;
+    display: block;
+    color: black ;
+    font-weight: 999;
+}
+.copy-code:active,.copy-code:focus{
+    box-shadow: 0 0 3px 3px blue;
+}

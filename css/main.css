@@ -1,84 +1,19 @@
-@import url('utilities/layout.css');
+@import url('./mobile-footer-header.css');
+@import url('./copy-code.css');
+@import url('./responsive.css');
+/** utilities*/
 @import url('utilities/colors.css');
-@import url('copy-code.css');
+@import url('utilities/layout.css');
+@import url('utilities/postion.css');
+@import url('utilities/sizing.css');
+@import url('utilities/spacing.css');
+@import url('utilities/text.css');
+@import url('utilities/zindex.css');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
-
-.versions-container > header button#nxtBtn{
-
-}
-.version{
-    border: 2px solid blue;
-    margin: 0 2.5%;
-    display: flex;
-    flex-direction: column;
-    height: 75vh;
-    margin-bottom: 10%;
-}
-.code-elements-container {
-    /* position: relative; */
-    border: 1px dashed black;
-    margin: 0 5%;
-}
-.code-container {
-    flex-grow: 1;
-    height: 100%;
-}
-.code-elements-container .code-container .copy-code {
-    min-height: 120px;
-    z-index: 0;
-    
-    min-width: 30vw;
-
-}
-.copy-code {
-    width: 100%;
-    max-width: 80vw;
-    height: auto;
-    max-height: 30vh;
-    font-family: monospace;
-    white-space: pre;
-    overflow-x: auto;
-    border: 1px solid #ccc;
-    background: #f5f5f5;
-    padding: .5em;
-    /* resize: vertical; */
-    height: 100%;
-    display: block;
-    color: black ;
-    font-weight: 999;
-}
- .dark-mode textarea {
-    background: rgb(40,38,46,.05);
-}
-textarea {
-    font-size: clamp(16px,100%,20px);
-}
-#mainScript{
-    max-height: none;
-    max-width: none;
-    height: 100%;
-    border: 2px solid red;
-    width: 100%;
-}
-#draftScript{
-    background-color: red !important;
-}
-#wokingBackupScript{
-    background-color: red !important;
-}
-#elementImg {
-    z-index: 0;
-    right: 0;
-    width: 50%;
-    display: none;
-}
-
 .enlarge {
     display: block !important;
     z-index: 9999 !important;
@@ -93,88 +28,18 @@ textarea {
     transform: translate(-50%, -50%) scale(1.5);
     /* optional: prevents interaction while enlarged */
 }
-
 .popup {
     position: absolute !important;
     top: 0;
     right: 0;
 }
 
-.code-elements-container .code-container {
-    position: relative;
-
-}
-
-.black-click-img-box {
-    display: block;
-    position: absolute;
-    right: 0;
-    background-color: black;
-    height: 25px;
-        width: 35px;
-        padding: 1%;
-}
-
-
-@media screen and (max-width: 801px){
-    .code-elements-container .code-container {
-            position: relative;   
-        }   
-    .code-container {
-    }
-    .dark-mode .code-elements-container .code-container .copy-code{
-    /* color: black; */
-    }
-    .code-elements-container .code-container .copy-code {
-        border: 1px solid black ;
-        
-    }
-
-    .code-elements-container {       
-        margin: 0 0;
-    }
-    .popup {
-        left: 5%; 
-    }                    
-    .versions-container{
-        margin: 0 5%;
-
-    }
-    .version{
-        margin: 0;
-    }
-    
-    .enlarge {
-        transform: translate(-50%, -50%) scale(2);
-    }
-    .black-click-img-box {
-        height: 25px;
-        width: 35px;
-        padding: 1%;
-        right: 1%;
-        top: 12%;
-    }
-}
-@media screen and (max-width: 420px) {
-    .black-click-img-box {
-        height: 40px;
-        width: 40px;
-    }
-}
-
-
-.copy-code:active,.copy-code:focus{
-    box-shadow: 0 0 3px 3px blue;
-}
-.hide{
-    display: none !important;
-}
 #xBtnPopup{
+    display: block;
+    position: sticky;
     border: 2px solid black;
     padding: 2%;
     background-color: white;
-    position: sticky;
     background-color: whitesmoke;
-    display: block;
     right: 0;
 }

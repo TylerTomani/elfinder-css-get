@@ -1,3 +1,4 @@
+
 .page-container {
     position: relative;
 }
@@ -5,8 +6,47 @@
     display: flex;
     flex-direction: column;
 }
-
 .versions-container > header {
     display: flex;
     justify-content: space-between;
+}
+.version{
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+}
+#mainScript{
+    max-height: none;
+    max-width: none;
+    height: 100%;
+    width: 100%;
+}
+.code-container {
+    flex-grow: 1;
+    height: 100%;
+}
+
+
+.code-elements-container .code-container {
+    position: relative;
+}
+.code-elements-container .code-container .copy-code {
+    min-height: 120px;
+    z-index: 0;   
+    min-width: 30vw;
+
+}
+#elementImg {
+    display: none;
+}
+.black-click-img-box {
+    display: block;
+}
+
+.black-click-img-box {
+    height: 25px;
+    width: 35px;
+}
+.hide{
+    display: none !important;
 }
