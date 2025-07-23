@@ -21,21 +21,18 @@
     height: 100%;
     width: 100%;
 }
-.code-container {
+/* .code-container {
     flex-grow: 1;
     height: 100%;
-}
-
-
-.code-elements-container .code-container {
+} */
+/* .code-elements-container .code-container {
     position: relative;
 }
 .code-elements-container .code-container .copy-code {
     min-height: 120px;
     z-index: 0;   
     min-width: 30vw;
-
-}
+} */
 #elementImg {
     display: none;
 }
@@ -46,7 +43,4 @@
 .black-click-img-box {
     height: 25px;
     width: 35px;
-}
-.hide{
-    display: none !important;
 }

@@ -1,6 +1,12 @@
+@import url('./default-colors.css');
 @import url('./mobile-footer-header.css');
 @import url('./copy-code.css');
 @import url('./responsive.css');
+/** components*/
+@import url('components/browser-tools-code.css');
+@import url('components/popup.css');
+@import url('components/img-enlarge.css');
+
 /** utilities*/
 @import url('utilities/colors.css');
 @import url('utilities/layout.css');
@@ -13,33 +19,4 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-.enlarge {
-    display: block !important;
-    z-index: 9999 !important;
-    position: fixed;
-    top: 50%;
-    /* left: 50%; */
-    max-width: 90vw;
-    max-height: 60vh;
-    transition: transform 0.2s ease;
-    /* You can't click when this is on  */
-    /* pointer-events: none; */
-    transform: translate(-50%, -50%) scale(1.5);
-    /* optional: prevents interaction while enlarged */
-}
-.popup {
-    position: absolute !important;
-    top: 0;
-    right: 0;
-}
-
-#xBtnPopup{
-    display: block;
-    position: sticky;
-    border: 2px solid black;
-    padding: 2%;
-    background-color: white;
-    background-color: whitesmoke;
-    right: 0;
 }
