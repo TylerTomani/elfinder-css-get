@@ -6,6 +6,8 @@
 
 .page-container > footer.mobile-footer-header {
     display: flex;
+    /* position: fixed; */
+    /* bottom: 0; */
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     justify-content: space-between;

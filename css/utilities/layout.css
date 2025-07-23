@@ -6,9 +6,16 @@
     display: flex;
     flex-direction: column;
 }
+.versions-container {
+    display: flex;
+    flex-direction: column;
+    /* border: 4px solid red; */
+}
 .versions-container > header {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
 }
 .version{
     display: flex;
@@ -21,18 +28,7 @@
     height: 100%;
     width: 100%;
 }
-/* .code-container {
-    flex-grow: 1;
-    height: 100%;
-} */
-/* .code-elements-container .code-container {
-    position: relative;
-}
-.code-elements-container .code-container .copy-code {
-    min-height: 120px;
-    z-index: 0;   
-    min-width: 30vw;
-} */
+
 #elementImg {
     display: none;
 }

@@ -2,7 +2,9 @@
 @import url('./mobile-footer-header.css');
 @import url('./copy-code.css');
 @import url('./responsive.css');
+@import url('./header-tools-container.css');
 /** components*/
+@import url('components/test-script-tools-container.css');
 @import url('components/browser-tools-code.css');
 @import url('components/popup.css');
 @import url('components/img-enlarge.css');

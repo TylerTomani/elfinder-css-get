@@ -1,82 +1,57 @@
+export function initFocusControls() {
+	const vibeCode = document.querySelector('#vibeCode');
+	const nxtBtn = document.querySelector('#nxtBtn');
+	const backBtn = document.querySelector('#backBtn');
+	const mainScript = document.querySelector('#mainScript');
+	const backToTopBtn = document.querySelector('#backToTopBtn');
+	const versionElementsContainer = document.querySelector('.version-elements-container');
+	const copyCodes = [...versionElementsContainer.querySelectorAll('.copy-code')];
 
-export function setupLetterFocusControls({
-	nxtBtn,
-	backBtn,
-	mainScript,
-	homelink,
-	backToTopBtn,
-	codeElementsContainer,
-	elementImg
-}) {
-	const focusableBtns = [nxtBtn, backBtn, homelink, backToTopBtn];
+	let iCopy = 0;
+	// let focusedMainScript = false;
 
-	let currentIndex = 0;
-	let elements = [];
-
-	function updateImage(source) {
-		if (elementImg) {
-			elementImg.src = source;
+	// mainScript.addEventListener('focus', () => focusedMainScript = true);
+	// mainScript.addEventListener('blur', () => focusedMainScript = false);
+	mainScript.addEventListener('keydown', e => {
+		if (e.shiftKey && e.key.toLowerCase() === 'b') {
+			backBtn.focus();
 		}
-	}
+	});
 
-	function focusElement(index) {
-		if (index >= 0 && index < elements.length) {
-			elements[index].focus();
+	copyCodes.forEach((el, idx) => {
+		el.addEventListener('focus', () => iCopy = idx);
+	});
 
-			const imgPath = elements[index].dataset.img;
-			if (imgPath) {
-				updateImage(imgPath);
+	document.addEventListener('keydown', e => {
+		const key = e.key.toLowerCase();
+
+		// if (focusedMainScript && !e.shiftKey) return;
+		// if (!e.shiftKey) return;
+
+		if (key === 'c') {
+			if (e.metaKey) return;
+
+			iCopy = e.shiftKey
+				? (iCopy - 1 + copyCodes.length) % copyCodes.length
+				: (iCopy + 1) % copyCodes.length;
+
+			copyCodes[iCopy]?.focus();
+		}
+
+		if (!isNaN(key)) {
+			const num = parseInt(key);
+			if (num >= 1 && num <= copyCodes.length) {
+				copyCodes[num - 1].focus();
 			}
 		}
-	}
 
-	function resetFocus() {
-		currentIndex = 0;
-		focusElement(currentIndex);
-	}
-
-	function handleKeydown(e) {
-		if (e.key === 'ArrowRight') {
-			if (currentIndex < elements.length - 1) {
-				currentIndex++;
-				focusElement(currentIndex);
-			}
-		} else if (e.key === 'ArrowLeft') {
-			if (currentIndex > 0) {
-				currentIndex--;
-				focusElement(currentIndex);
-			}
-		} else if (e.key === 'Enter') {
-			elements[currentIndex]?.click();
+		// Focus shortcuts
+		switch (key) {
+			case 'm': mainScript.focus(); break;
+			case 'b': backBtn.focus(); break;
+			case 'n': nxtBtn.focus(); break;
+			case 'e': backToTopBtn.focus(); break;
+			case 'v': vibeCode.focus(); break;
 		}
-	}
-
-	function setupListeners() {
-		nxtBtn?.addEventListener('click', () => {
-			if (currentIndex < elements.length - 1) {
-				currentIndex++;
-				focusElement(currentIndex);
-			}
-		});
-
-		backBtn?.addEventListener('click', () => {
-			if (currentIndex > 0) {
-				currentIndex--;
-				focusElement(currentIndex);
-			}
-		});
-
-		document.addEventListener('keydown', handleKeydown);
-	}
-
-	function init() {
-		elements = Array.from(codeElementsContainer?.querySelectorAll('button, a, .focusable') || []);
-
-		
-
-		resetFocus();
-		setupListeners();
-	}
-
-	init();
+	});
 }
