@@ -1,70 +1,62 @@
-.version {
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
 .browser-tools-code {
-  width: 100%;
-  display: flex;
-  /* justify-content: center; */
-  flex-direction: column;
+width: 100%;
+display: flex;
+flex-direction: column;
 }
-
 .tool-code {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 80%;
-  background: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  gap: 1.5rem;
-  padding: 1rem;
+display: flex;
+flex-wrap: wrap;
+max-width: 100%;
+background: #f9f9f9;
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+gap: 1.5rem;
+padding: 1rem;
 }
 
 /* Code Block */
 .code-block {
-  flex: 1 1 400px;
-  min-width: 300px;
-  max-width: 100%;
-  background: #1e1e1e;
-  border-radius: 8px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+    flex: 1 1 400px;
+    min-width: 300px;
+    max-width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
-
 /* Scrollable Code Area */
 .code-scroll {
-  flex-grow: 1;
-  overflow-x: auto;
-  overflow-y: auto;
-  max-height: 500px; /* Optional: control vertical height */
+    flex-grow: 1;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 250px; /* Optional: control vertical height */   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #000;
 }
-
 /* Code Styling */
-.browser-tools-code .copy-code {
-  all: unset;
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-  font-family: monospace;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: #dcdcdc;
-  white-space: pre;
-}
-.browser-tools-code .copy-code {
-  white-space: pre;
-  word-break: normal;
+.browser-tools-code .code-scroll .copy-code  {
+    all: unset;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #dcdcdc;
+    white-space: pre;
+    word-break: normal;
 }
 /* Explanation Text */
 .code-explanation-txt {
-  flex: 1 1 250px;
-  min-width: 200px;
-  font-size: 0.95rem;
-  color: #333;
-  line-height: 1.5;
-  padding-top: 0.25rem;
-  align-self: flex-start;
+flex: 1 1 250px;
+min-width: 200px;
+font-size: 0.95rem;
+color: #333;
+line-height: 1.5;
+padding-top: 0.25rem;
+align-self: flex-start;
 }

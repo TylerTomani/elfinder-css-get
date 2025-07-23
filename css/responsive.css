@@ -1,11 +1,11 @@
-@media screen and (max-width: 801px){
+/* @media screen and (max-width: 801px){
     .code-elements-container .code-container {
             position: relative;   
         }   
     .code-container {
     }
     .dark-mode .code-elements-container .code-container .copy-code{
-    /* color: black; */
+    color: black;
     }
     .code-elements-container .code-container .copy-code {
         border: 1px solid black ;
@@ -36,10 +36,10 @@
         right: 1%;
         top: 12%;
     }
-}
-@media screen and (max-width: 420px) {
+} */
+/* @media screen and (max-width: 420px) {
     .black-click-img-box {
         height: 40px;
         width: 40px;
     }
-}
+} */
