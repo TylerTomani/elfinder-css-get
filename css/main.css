@@ -2,7 +2,6 @@
 @import url('./mobile-footer-header.css');
 @import url('./copy-code.css');
 @import url('./responsive.css');
-/* @import url('./header-tools-container.css'); */
 /** components*/
 @import url('components/version-elements-container.css');
 @import url('components/browser-tools-code.css');

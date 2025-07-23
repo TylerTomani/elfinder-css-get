@@ -2,7 +2,11 @@
   overflow: hidden; /* clears floats */
   position: relative;
 }
-
+.version-elements-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 /* Float the browser-tools on the right */
 .browser-tools-code {
   float: right;
@@ -14,20 +18,10 @@
   margin-left: 1rem;
   box-sizing: border-box;
 }
-
 /* Everything else (article + code-containers) flows left naturally */
 .version-elements-container article,
 .code-container {
   overflow: hidden;
   box-sizing: border-box;
   margin-bottom: 1rem;
-}
-
-/* Optional: if you want wider layout before wrapping */
-.version-elements-container article,
-.version-elements-container .code-container {
-  max-width: calc(60% - 1rem); Leave space for the floated .browser-tools-code
-}
-.clear {
-    clear: both;
 }
