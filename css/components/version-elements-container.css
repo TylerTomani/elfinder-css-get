@@ -1,0 +1,33 @@
+.version-elements-container {
+  overflow: hidden; /* clears floats */
+  position: relative;
+}
+
+/* Float the browser-tools on the right */
+.browser-tools-code {
+  float: right;
+  width: 40%;
+  min-width: 300px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-left: 1rem;
+  box-sizing: border-box;
+}
+
+/* Everything else (article + code-containers) flows left naturally */
+.version-elements-container article,
+.code-container {
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+/* Optional: if you want wider layout before wrapping */
+.version-elements-container article,
+.version-elements-container .code-container {
+  max-width: calc(60% - 1rem); Leave space for the floated .browser-tools-code
+}
+.clear {
+    clear: both;
+}

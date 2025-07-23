@@ -30,7 +30,30 @@
 				<header>
 					<h2 class="bg-version">elFinder-css-get-draft</h2>
 					<a id="vibeCode" target="_blank" href="https://tylertomani.github.io/vibe-coding-project/">vibe coding</a>
-					</header>
+				</header>
+				<div id="findElements" class="version-elements-container">
+					<div class="browser-tools-code">
+						<div id="getStylesCode" class="tool-code">
+							<h3>get css from element - js script</h3>
+							<p>Gets the CSS styles for the element passed in for <code class="m">$0</code></p>
+							<div class="code-scroll">
+								<pre class="code-block">
+								<code class="copy-code language-js">
+function getComputedStylesString(el) {
+	const styles = window.getComputedStyle(el);
+	let result = "";
+	for (let prop of styles) {
+		result += `${prop}: ${styles.getPropertyValue(prop)};\n`;
+	}
+	return result;
+}
+// Run on the element you inspected:
+copy(getComputedStylesString($0));
+								</code>
+								</pre>
+							</div>
+						</div>
+					</div>
 					<article>
 						<p>When done, make into extension in:</p>
 						<div class="code-container">
@@ -42,36 +65,33 @@
 							</span>
 						</p>
 					</article>
-				</header>
-				<div id="findElements" class="version-elements-container">
-					<a id="xBtnPopup" href="#">X</a>
 					<div class="code-container">
-						<a class="black-click-img-box"></a>
+						<!-- <a class="black-click-img-box"></a> -->
 						<h4>Load Unpack</h4>
 						<textarea readonly data-img="images/01.png" tabindex="0" class="copy-code">TBD</textarea>
 					</div>
 					<div class="code-container">
-						<a class="black-click-img-box"></a>
+						<!-- <a class="black-click-img-box"></a> -->
 						<h4>Remove</h4>
 						<pre readonly data-img="images/02.png" tabindex="0" class="copy-code">
-	<span class="r">&lt;cr-button id="removeButton" ...>Remove&lt;/cr-button></span>
+<span class="r">&lt;cr-button id="removeButton" ...>Remove&lt;/cr-button></span>
 						</pre>
 					</div>
-					<div class="code-container">
-						<a class="black-click-img-box"></a>
+					<div class="code-container ">
+						<!-- <a class="black-click-img-box"></a> -->
 						<pre readonly data-img="images/03.png" tabindex="0" class="copy-code">
-	<span class="b">items-container</span> <span class="m">extensions-item</span> <span class="r">#removeButton</span>
+<span class="b">items-container</span> <span class="m">extensions-item</span> <span class="r">#removeButton</span>
 						</pre>
 					</div>
 					<div class="code-container">
-						<a class="black-click-img-box"></a>
+						<!-- <a class="black-click-img-box"></a> -->
 						<h3>3b. get all remove btn</h3>
 						<p>for now, query all remove buttons in:</p>
 						<pre readonly data-img="images/03.png" tabindex="0" class="copy-code">
-	<!-- Trimmed large code block for clarity -->
-	<span class="b">&lt;div class="items-container"></span>
-	...
-	<span class="r">&lt;cr-button id="removeButton" ...>Remove&lt;/cr-button></span>
+<!-- Trimmed large code block for clarity -->
+<span class="b">&lt;div class="items-container"></span>
+...
+<span class="r">&lt;cr-button id="removeButton" ...>Remove&lt;/cr-button></span>
 						</pre>
 					</div>
 					<!-- Separate image element outside versions -->
@@ -79,31 +99,11 @@
 				</div>
 
 			</div>
-				<div class="browser-tools-code">
-					<div id="getStylesCode" class="tool-code">
-						<h3>get css from element - js script</h3>
-						<p>Gets the CSS styles for the element passed in for <code class="m">$0</code></p>
-						<div class="code-scroll">
-							<pre class="code-block">
-							<code class="copy-code language-js">
-		function getComputedStylesString(el) {
-		const styles = window.getComputedStyle(el);
-		let result = "";
-		for (let prop of styles) {
-		result += `${prop}: ${styles.getPropertyValue(prop)};\n`;
-		}
-		return result;
-		}
-		// Run on the element you inspected:
-		copy(getComputedStylesString($0));
-							</code>
-							</pre>
-						</div>
-					</div>
-				</div>
+				
 			</section>
 			<!-- Main content with version controls -->
 			<div class="version-container">
+				
 				<header>
 					<a tabindex="0" id="backBtn">back</a>
 					<h2 id="versionTitle">TBD</h2>
@@ -130,7 +130,7 @@
 			</div>	 
 		</main>
 		 <!-- Footer (Mobile Header Style) -->
-		 <footer class="mobile-footer-header">
+		 <!-- <footer class="mobile-footer-header">
 			 <div class="main-links">
 				 <a tabindex="0" id="homelink" href="https://tylertomani.github.io/myWebSite/index.html">Home (main)</a>
 			 </div>
@@ -142,7 +142,7 @@
 					 chatGpt Questions
 				 </a>
 			 </div>
-		 </footer>
+		 </footer> -->
 	</div>
 	</div> <!-- .page-container -->
 </body>
