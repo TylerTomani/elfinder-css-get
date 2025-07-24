@@ -2,7 +2,8 @@ export function initFocusControls() {
 	const vibeCode = document.querySelector('#vibeCode');
 	const nxtBtn = document.querySelector('#nxtBtn');
 	const backBtn = document.querySelector('#backBtn');
-	const mainScript = document.querySelector('#mainScript');
+	const mainCode = document.querySelector('#mainCode');
+	const versionScript = document.querySelector('#versionScript');
 	const backToTopBtn = document.querySelector('#backToTopBtn');
 	const versionElementsContainer = document.querySelector('.version-elements-container');
 	const copyCodes = [...versionElementsContainer.querySelectorAll('.copy-code')];
@@ -12,7 +13,7 @@ export function initFocusControls() {
 
 	// mainScript.addEventListener('focus', () => focusedMainScript = true);
 	// mainScript.addEventListener('blur', () => focusedMainScript = false);
-	mainScript.addEventListener('keydown', e => {
+	versionScript.addEventListener('keydown', e => {
 		if (e.shiftKey && e.key.toLowerCase() === 'b') {
 			backBtn.focus();
 		}
@@ -47,7 +48,10 @@ export function initFocusControls() {
 
 		// Focus shortcuts
 		switch (key) {
-			case 'm': mainScript.focus(); break;
+			case 'm':
+				mainCode.focus();
+				console.log(e.target)
+			 	break;
 			case 'b': backBtn.focus(); break;
 			case 'n': nxtBtn.focus(); break;
 			case 'e': backToTopBtn.focus(); break;

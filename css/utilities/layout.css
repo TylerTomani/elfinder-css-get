@@ -14,8 +14,6 @@
 .versions-container > header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
 }
 .version{
     display: flex;

@@ -1,7 +1,7 @@
 .browser-tools-code {
-    /* width: 100%; */
     display: flex;
     flex-direction: column;
+    width: 50vw;
 }
 .browser-tools-code .tool-code {
     display: flex;
@@ -14,33 +14,36 @@
     /* gap: 1.5rem; */
     /* padding: 1rem; */
 }
-
-/* Code Block */
-.browser-tools-code .code-block {
-    flex: 1 1 400px;
-    min-width: 300px;
-    /* max-width: 100%; */
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-/* Scrollable Code Area */
 .browser-tools-code .code-scroll {
     flex-grow: 1;
     overflow-x: auto;
     overflow-y: auto;
-    max-height: 250px; /* Optional: control vertical height */   
+    max-height: 250px;/* Optional: control vertical height   */
     display: flex;
     flex-direction: column;
+    /* overflow: scroll; */
     justify-content: flex-start;
     background: #000;
+    width: 100%;
 }
+/* Code Block */
+.browser-tools-code .code-block {
+    flex: 1 1 400px;
+    /* min-width: 300px; */
+    width: 100%;
+    /* max-width: 100%; */
+    border-radius: 8px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+}
+/* Scrollable Code Area */
+
 /* Code Styling */
 .browser-tools-code .code-scroll .copy-code  {
     all: unset;
     display: block;
-    /* width: 100%; */
+    width: 100%;
     height: 100%;
     padding: 0 1rem;
     border-radius: 5px;
